@@ -141,6 +141,9 @@ int main() {
 		// but can be freed inside the task
 	}
 
+	// we should see 8 threads working at time
+	// we have to sleep some seconds to let 100 tasks finish
+	// otherwise the program will quit before the threads finishing
 	sleep(20);
 
 	threadpool_destroy(&pool);
